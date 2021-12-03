@@ -58,9 +58,93 @@ public class Producto implements Serializable{
     private String tipo;
 
 
+    public Long getId() {
+        return id;
+    }
 
-	
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
+
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public int getDisponibles() {
+        return disponibles;
+    }
+
+    public void setDisponibles(int disponibles) {
+        this.disponibles = disponibles;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getDescuento() {
+        return descuento;
+    }
+
+    public void setDescuento(int descuento) {
+        this.descuento = descuento;
+    }
+
+    public int getImpuestos() {
+        return impuestos;
+    }
+
+    public void setImpuestos(int impuestos) {
+        this.impuestos = impuestos;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public Producto(Long id, String nombreProducto, int cantidad, int disponibles, int precio, String marca,
             int descuento, int impuestos, int peso, int puntos, String tipo) {
