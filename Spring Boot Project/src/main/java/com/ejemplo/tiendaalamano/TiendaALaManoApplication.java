@@ -19,6 +19,9 @@ public class TiendaALaManoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TiendaALaManoApplication.class, args);
+
+		System.out.println("Api Corriendo...");
+
 	}
 
 	@EnableWebSecurity

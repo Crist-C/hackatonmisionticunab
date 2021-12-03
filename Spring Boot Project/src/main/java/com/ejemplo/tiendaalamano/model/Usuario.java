@@ -14,6 +14,18 @@ import javax.persistence.Table;
 public class Usuario implements Serializable{
 	private static final long serialVersionUID = -5773962493781143007L;
 
+	
+
+	public Usuario(Long id, String username, String password) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+	}
+	
+	public Usuario() {
+	}
+	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
