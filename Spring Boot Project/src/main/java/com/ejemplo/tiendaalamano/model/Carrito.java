@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="usuario")
+@Table(name="carrito")
 public class Carrito implements Serializable{
 	private static final long serialVersionUID = -5773962493781143007L;
     
