@@ -1,7 +1,6 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.model.Usuario;
-import com.ejemplo.tiendaalamano.service.UsuarioService;
+import com.ejemplo.tiendaalamano.model.Usuario.Usuario;
 import com.ejemplo.tiendaalamano.service.UsuarioServiceImpl;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,13 +26,7 @@ public class UsuarioController{
     public Usuario crearUsuario(@RequestBody Usuario usuario) {
         return usuarioServiceiImpl.save(usuario);
     }
-
-
-    @PostMapping
-    public Usuario actualizarContraseña(@RequestBody Usuario usuario) {
-        return usuarioServiceiImpl.save(usuario);
-    }
     
-//pruba github
+
 
 }
