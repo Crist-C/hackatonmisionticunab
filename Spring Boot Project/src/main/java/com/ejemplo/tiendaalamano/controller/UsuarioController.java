@@ -28,11 +28,12 @@ public class UsuarioController{
         return usuarioServiceiImpl.save(usuario);
     }
 
-
+/* 
     @PostMapping
     public Usuario actualizarContraseña(@RequestBody Usuario usuario) {
-        return usuarioServiceiImpl.save(usuario);
+        return usuarioServiceiImpl.save(usuario); 
     }
+    */
     
 //pruba github
 

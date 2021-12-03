@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TiendaALaManoApplication<tiendaalamano>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ejemplo.tiendaalamano.TiendaALaManoApplication",
+            "projectName": "tiendaalamano",
+            "args": ""
+        }
+    ]
+}
