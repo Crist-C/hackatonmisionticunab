@@ -2,13 +2,18 @@ package com.ejemplo.tiendaalamano.model;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.EntityListeners;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 
 @Entity
@@ -44,6 +49,11 @@ public class Carrito implements Serializable{
 
     @Column(length = 25, nullable=false)
 	private boolean enviar_domicilio;
+
+    
+    @ManyToOne
+    @JoinColumn(name ="cliente_id")
+    private Cliente clienteEntity;
 
     public Carrito(Long id, String pesoenkg, String costo_total, boolean pago_contra_entrega, String calificacion,
             Date horario_entrega, int puntos_totales, boolean estado, boolean enviar_domicilio) {

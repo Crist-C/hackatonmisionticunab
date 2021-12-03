@@ -8,9 +8,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Index;
+import javax.persistence.OneToMany;
 
-@Entity
-@Table(name="cliente")
+
+@Entity(name ="clienteEntity")
+@Table(indexes = {
+    @Index(columnList = "usuarioId", name = "index_usuarioid", unique = true),
+    @Index(columnList = "username", name = "index_username", unique = true),
+    @Index(columnList = "nombre", name = "index_nombre", unique = true),
+    @Index(columnList = "direccion", name = "index_correo", unique = true),
+    @Index(columnList = "celular", name = "index_correo", unique = true),
+    @Index(columnList = "correo", name = "index_correo", unique = true),
+    @Index(columnList = "puntos", name = "index_correo", unique = true),
+    @Index(columnList = "deuda", name = "index_correo", unique = true),
+    @Index(columnList = "estado_de_cuenta", name = "index_correo", unique = true),
+    @Index(columnList = "password", name = "index_correo", unique = true),
+})
 public class Cliente implements Serializable {
 	private static final long serialVersionUID = -5773962493781143007L;
 
@@ -44,6 +61,11 @@ public class Cliente implements Serializable {
 
     @Column(length = 25, nullable=false)
 	private String password;
+
+    /* 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy ="clienteEntity") */
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clienteEntity")
 
     public Cliente(Long id, String username, String nombre, String direccion, String celular, String correo, int puntos,
             int deuda, boolean estado_de_cuenta, String password) {
