@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/model/Cliente.java
 package com.ejemplo.tiendaalamano.model;
+=======
+package com.ejemplo.tiendaalamano.entities;
+>>>>>>> debugger:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/entities/Cliente.java
 
 import java.io.Serializable;
 
@@ -15,8 +19,13 @@ import javax.persistence.Index;
 import javax.persistence.OneToMany;
 
 
+<<<<<<< HEAD:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/model/Cliente.java
 @Entity(name ="cliente")
 @Table(indexes = {
+=======
+ @Entity(name ="cliente")
+ @Table(indexes = {
+>>>>>>> debugger:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/entities/Cliente.java
     @Index(columnList = "cliente_id", name = "index_cliente_id", unique = true),
     @Index(columnList = "username", name = "index_username", unique = true),
     @Index(columnList = "nombre", name = "index_nombre", unique = true),
@@ -32,7 +41,7 @@ public class Cliente implements Serializable {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long cliente_id;
 
     @Column(length = 25, nullable=false)
 	private String username;
@@ -62,11 +71,19 @@ public class Cliente implements Serializable {
 	private String password;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+<<<<<<< HEAD:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/model/Cliente.java
     private List<Carrito> CarritoList = new ArrayList<>();
 
     public Cliente(Long id, String username, String nombre, String direccion, String celular, String correo, int puntos,
             int deuda, boolean estado_de_cuenta, String password) {
         this.id = id;
+=======
+    private List<Carrito> CarritoList = new ArrayList<>(); 
+
+    public Cliente(Long cliente_id, String username, String nombre, String direccion, String celular, String correo, int puntos,
+            int deuda, boolean estado_de_cuenta, String password) {
+        this.cliente_id = cliente_id;
+>>>>>>> debugger:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/entities/Cliente.java
         this.username = username;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -82,11 +99,19 @@ public class Cliente implements Serializable {
 	}
 
     public Long getId() {
+<<<<<<< HEAD:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/model/Cliente.java
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+=======
+        return cliente_id;
+    }
+
+    public void setId(Long id) {
+        this.cliente_id = id;
+>>>>>>> debugger:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/entities/Cliente.java
     }
 
     public String getUsername() {

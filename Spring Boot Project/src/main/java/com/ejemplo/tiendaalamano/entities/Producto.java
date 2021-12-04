@@ -1,4 +1,5 @@
-package com.ejemplo.tiendaalamano.model;
+package com.ejemplo.tiendaalamano.entities;
+
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;

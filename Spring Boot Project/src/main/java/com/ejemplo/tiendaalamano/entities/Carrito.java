@@ -1,4 +1,4 @@
-package com.ejemplo.tiendaalamano.model;
+package com.ejemplo.tiendaalamano.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,10 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+<<<<<<< HEAD:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/model/Carrito.java
 /* 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.EntityListeners; */
+=======
+
+/* import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import javax.persistence.EntityListeners;  */
+>>>>>>> debugger:Spring Boot Project/src/main/java/com/ejemplo/tiendaalamano/entities/Carrito.java
 
 
 @Entity
