@@ -1,4 +1,4 @@
-package com.ejemplo.tiendaalamano.model.Usuario;
+package com.ejemplo.tiendaalamano.entities;
 
 import java.io.Serializable;
 
@@ -55,4 +55,6 @@ public class Usuario implements Serializable{
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	
 }
