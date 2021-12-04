@@ -15,9 +15,9 @@ import javax.persistence.Index;
 import javax.persistence.OneToMany;
 
 
-@Entity(name ="clienteEntity")
+@Entity(name ="cliente")
 @Table(indexes = {
-    @Index(columnList = "usuarioId", name = "index_usuarioid", unique = true),
+    @Index(columnList = "cliente_id", name = "index_cliente_id", unique = true),
     @Index(columnList = "username", name = "index_username", unique = true),
     @Index(columnList = "nombre", name = "index_nombre", unique = true),
     @Index(columnList = "direccion", name = "index_direccion", unique = true),
@@ -26,10 +26,9 @@ import javax.persistence.OneToMany;
     @Index(columnList = "puntos", name = "index_puntos", unique = true),
     @Index(columnList = "deuda", name = "index_deuda", unique = true),
     @Index(columnList = "estado_de_cuenta", name = "index_estado_de_cuenta", unique = true),
-    @Index(columnList = "password", name = "index_password", unique = true),
 })
 public class Cliente implements Serializable {
-	private static final long serialVersionUID = -5773962493781143007L;
+	private static final long serialVersionUID =-5773962493781143007L;
 
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,7 +61,7 @@ public class Cliente implements Serializable {
     @Column(length = 25, nullable=false)
 	private String password;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "clienteEntity")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private List<Carrito> CarritoList = new ArrayList<>();
 
     public Cliente(Long id, String username, String nombre, String direccion, String celular, String correo, int puntos,

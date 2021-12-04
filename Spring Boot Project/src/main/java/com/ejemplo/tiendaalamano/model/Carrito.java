@@ -19,7 +19,7 @@ import javax.persistence.EntityListeners; */
 @Entity
 @Table(name="carrito")
 public class Carrito implements Serializable{
-	private static final long serialVersionUID = -5773962493781143007L;
+	private static final long serialVersionUID =-5773962493781143007L;
     
     
 	@Id
@@ -53,7 +53,7 @@ public class Carrito implements Serializable{
     
     @ManyToOne
     @JoinColumn(name ="cliente_id")
-    private Cliente clienteEntity;
+    private Cliente cliente;
 
     public Carrito(Long id, String pesoenkg, String costo_total, boolean pago_contra_entrega, String calificacion,
             Date horario_entrega, int puntos_totales, boolean estado, boolean enviar_domicilio) {
