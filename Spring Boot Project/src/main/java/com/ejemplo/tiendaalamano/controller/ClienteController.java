@@ -1,11 +1,10 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.models.Cliente.ClienteCrearDto;
-import com.ejemplo.tiendaalamano.models.Cliente.ClienteDto;
-import com.ejemplo.tiendaalamano.models.Cliente.ClienteRegistrarRequest;
-import com.ejemplo.tiendaalamano.models.Cliente.ClienteRest;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteCrearDto;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteDto;
+import com.ejemplo.tiendaalamano.models.Cliente.Request.ClienteRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.Cliente.Rest.ClienteRest;
 import com.ejemplo.tiendaalamano.service.Cliente.IClienteService;
-import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

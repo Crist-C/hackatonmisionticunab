@@ -1,6 +1,18 @@
 package com.ejemplo.tiendaalamano.controller;
 
+import com.ejemplo.tiendaalamano.models.PuntoDeVenta.Dtos.PuntoDeVentaCrearDto;
+import com.ejemplo.tiendaalamano.models.PuntoDeVenta.Dtos.PuntoDeVentaDto;
+import com.ejemplo.tiendaalamano.models.PuntoDeVenta.Request.PuntoDeVentaRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.PuntoDeVenta.Rest.PuntoDeVentaRest;
+import com.ejemplo.tiendaalamano.service.PuntoDeVenta.IPuntoDeVentaService;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/PuntoVenta")
@@ -11,8 +23,6 @@ public class PuntoDeVentaController {
 
     @Autowired
     IPuntoDeVentaService iPuntoDeVentaService; // Interfaz
-    
-    CarritoServiceImpl puntoDeVentaServiceiImpl;
 
     @GetMapping
     public String obtenerPuntoDeVenta() {

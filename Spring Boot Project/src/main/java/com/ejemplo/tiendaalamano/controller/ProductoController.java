@@ -1,6 +1,18 @@
 package com.ejemplo.tiendaalamano.controller;
 
+import com.ejemplo.tiendaalamano.models.Producto.Dtos.ProductoCrearDto;
+import com.ejemplo.tiendaalamano.models.Producto.Dtos.ProductoDto;
+import com.ejemplo.tiendaalamano.models.Producto.Request.ProductoRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.Producto.Rest.ProductoRest;
+import com.ejemplo.tiendaalamano.service.Producto.IProductoService;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/Producto")
@@ -11,8 +23,6 @@ public class ProductoController {
 
     @Autowired
     IProductoService iProductoService; // Interfaz
-    
-    CarritoServiceImpl productoServiceiImpl;
 
     @GetMapping
     public String obtenerProducto() {

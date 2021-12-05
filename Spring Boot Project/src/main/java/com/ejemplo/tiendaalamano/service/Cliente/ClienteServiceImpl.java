@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ejemplo.tiendaalamano.entities.Usuario;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
-import com.ejemplo.tiendaalamano.repository.UsuarioRepository;
+import com.ejemplo.tiendaalamano.entities.Cliente;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteCrearDto;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteDto;
+import com.ejemplo.tiendaalamano.repository.IClienteRepository;
 
 @Service
 public class ClienteServiceImpl implements IClienteService {
@@ -20,48 +20,48 @@ public class ClienteServiceImpl implements IClienteService {
 	ModelMapper modelMapper;
 	
 	@Autowired
-	private UsuarioRepository UsuarioRepository;
+	private IClienteRepository ClienteRepository;
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<Usuario> findAll() {
-		return (List<Usuario>) UsuarioRepository.findAll();
+	public List<Cliente> findAll() {
+		return (List<Cliente>) ClienteRepository.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Optional<Usuario> findById(Long id) {
-		return UsuarioRepository.findById(id);
+	public Optional<Cliente> findById(Long id) {
+		return ClienteRepository.findById(id);
 	}
 
 	@Override
 	@Transactional
-	public Usuario save(Usuario Usuario) {
-		return UsuarioRepository.save(Usuario);
+	public Cliente save(Cliente Cliente) {
+		return ClienteRepository.save(Cliente);
 	}
 
 	@Override
 	@Transactional
 	public void deleteById(Long id) {
-		UsuarioRepository.deleteById(id);
+		ClienteRepository.deleteById(id);
 	}
 
 	@Override
-	public UsuarioDto crearUsuario(UsuarioCrearDto usuarioCrearDto) {
+	public ClienteDto crearCliente(ClienteCrearDto clienteCrearDto) {
 		
-		Usuario usuarioEntityDto= modelMapper.map(usuarioCrearDto, Usuario.class);
-        //usuarioEntityDto.setEncryptedPassword("encryptedPassword");
-        //usuarioEntityDto.setUsuarioId("usuarioId");
+		Cliente clienteEntityDto= modelMapper.map(clienteCrearDto, Cliente.class);
+        //clienteEntityDto.setEncryptedPassword("encryptedPassword");
+        //clienteEntityDto.setClienteId("clienteId");
 
-        Usuario usuarioEntitySave=UsuarioRepository.save(usuarioEntityDto);
+        Cliente clienteEntitySave=ClienteRepository.save(clienteEntityDto);
 
-        UsuarioDto usuarioDto= modelMapper.map(usuarioEntitySave, UsuarioDto.class);
+        ClienteDto clienteDto= modelMapper.map(clienteEntitySave, ClienteDto.class);
 
-        return usuarioDto;
+        return clienteDto;
 	}
 
 	@Override
-	public List<Usuario> login(String username, String password) {
+	public List<Cliente> login(String username, String password) {
 		return null;
 	}
 

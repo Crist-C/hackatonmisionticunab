@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ejemplo.tiendaalamano.entities.Usuario;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
-import com.ejemplo.tiendaalamano.repository.UsuarioRepository;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioCrearDto;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioDto;
+import com.ejemplo.tiendaalamano.repository.IUsuarioRepository;
 
 @Service
 public class UsuarioServiceImpl implements IUsuarioService {
@@ -20,7 +20,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
 	ModelMapper modelMapper;
 	
 	@Autowired
-	private UsuarioRepository UsuarioRepository;
+	private IUsuarioRepository UsuarioRepository;
 
 	@Override
 	@Transactional(readOnly = true)

@@ -1,12 +1,11 @@
 package com.ejemplo.tiendaalamano.controller;
 
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioRegistrarRequest;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioRest;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioCrearDto;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioDto;
+import com.ejemplo.tiendaalamano.models.Usuario.Request.UsuarioRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.Usuario.Rest.UsuarioRest;
 import com.ejemplo.tiendaalamano.service.Carrito.CarritoServiceImpl;
 import com.ejemplo.tiendaalamano.service.Usuario.IUsuarioService;
-import com.ejemplo.tiendaalamano.service.Usuario.UsuarioServiceImpl;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

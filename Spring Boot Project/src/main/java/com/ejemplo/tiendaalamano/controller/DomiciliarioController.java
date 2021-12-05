@@ -1,5 +1,21 @@
 package com.ejemplo.tiendaalamano.controller;
 
+import com.ejemplo.tiendaalamano.models.Domiciliario.Dtos.DomiciliarioCrearDto;
+import com.ejemplo.tiendaalamano.models.Domiciliario.Dtos.DomiciliarioDto;
+import com.ejemplo.tiendaalamano.models.Domiciliario.Request.DomiciliarioRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.Domiciliario.Rest.DomiciliarioRest;
+import com.ejemplo.tiendaalamano.service.Domiciliario.IDomiciliarioService;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/Domiciliario")
 public class DomiciliarioController {
     
     @Autowired
@@ -7,8 +23,6 @@ public class DomiciliarioController {
 
     @Autowired
     IDomiciliarioService iDomiciliarioService; // Interfaz
-    
-    CarritoServiceImpl domiciliarioServiceiImpl;
 
     @GetMapping
     public String obtenerDomiciliario() {

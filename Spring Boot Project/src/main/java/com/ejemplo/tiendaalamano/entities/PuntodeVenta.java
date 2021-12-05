@@ -12,8 +12,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="puntodeventa")
-public class PuntodeVenta implements Serializable{
-	private static final long serialVersionUID = -5773962493781143007L;
+public class PuntoDeVenta implements Serializable{
+	private static final long serialVersionUID = 1L;
     
     
 	@Id
@@ -31,14 +31,14 @@ public class PuntodeVenta implements Serializable{
 	private String encargado;
 
 
-    public PuntodeVenta(Long id, String direccion, String telefono, String encargado) {
+    public PuntoDeVenta(Long id, String direccion, String telefono, String encargado) {
         this.id = id;
         this.direccion = direccion;
         this.telefono = telefono;
         this.encargado = encargado;
     }
     
-    public PuntodeVenta(){
+    public PuntoDeVenta(){
 
     }
 

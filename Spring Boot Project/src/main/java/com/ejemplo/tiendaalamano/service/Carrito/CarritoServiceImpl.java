@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ejemplo.tiendaalamano.entities.Usuario;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
-import com.ejemplo.tiendaalamano.repository.UsuarioRepository;
+import com.ejemplo.tiendaalamano.entities.Carrito;
+import com.ejemplo.tiendaalamano.models.Carrito.Dtos.CarritoCrearDto;
+import com.ejemplo.tiendaalamano.models.Carrito.Dtos.CarritoDto;
+import com.ejemplo.tiendaalamano.repository.ICarritoRepository;
 
 @Service
 public class CarritoServiceImpl implements ICarritoService {
@@ -20,51 +20,49 @@ public class CarritoServiceImpl implements ICarritoService {
 	ModelMapper modelMapper;
 	
 	@Autowired
-	private UsuarioRepository UsuarioRepository;
+	private ICarritoRepository CarritoRepository;
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<Usuario> findAll() {
-		return (List<Usuario>) UsuarioRepository.findAll();
+	public List<Carrito> findAll() {
+		return (List<Carrito>) CarritoRepository.findAll();
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Optional<Usuario> findById(Long id) {
-		return UsuarioRepository.findById(id);
+	public Optional<Carrito> findById(Long id) {
+		return CarritoRepository.findById(id);
 	}
 
 	@Override
 	@Transactional
-	public Usuario save(Usuario Usuario) {
-		return UsuarioRepository.save(Usuario);
+	public Carrito save(Carrito Carrito) {
+		return CarritoRepository.save(Carrito);
 	}
 
 	@Override
 	@Transactional
 	public void deleteById(Long id) {
-		UsuarioRepository.deleteById(id);
+		CarritoRepository.deleteById(id);
 	}
 
 	@Override
-	public UsuarioDto crearUsuario(UsuarioCrearDto usuarioCrearDto) {
+	public CarritoDto crearCarrito(CarritoCrearDto carritoCrearDto) {
 		
-		Usuario usuarioEntityDto= modelMapper.map(usuarioCrearDto, Usuario.class);
-        //usuarioEntityDto.setEncryptedPassword("encryptedPassword");
-        //usuarioEntityDto.setUsuarioId("usuarioId");
+		Carrito carritoEntityDto= modelMapper.map(carritoCrearDto, Carrito.class);
+        //carritoEntityDto.setEncryptedPassword("encryptedPassword");
+        //carritoEntityDto.setCarritoId("carritoId");
 
-        Usuario usuarioEntitySave=UsuarioRepository.save(usuarioEntityDto);
+        Carrito carritoEntitySave=CarritoRepository.save(carritoEntityDto);
 
-        UsuarioDto usuarioDto= modelMapper.map(usuarioEntitySave, UsuarioDto.class);
+        CarritoDto carritoDto= modelMapper.map(carritoEntitySave, CarritoDto.class);
 
-        return usuarioDto;
+        return carritoDto;
 	}
 
 	@Override
-	public List<Usuario> login(String username, String password) {
+	public List<Carrito> login(String username, String password) {
 		return null;
 	}
-
-
 
 }

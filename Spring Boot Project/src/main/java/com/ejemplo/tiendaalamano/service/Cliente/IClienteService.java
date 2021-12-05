@@ -3,17 +3,17 @@ package com.ejemplo.tiendaalamano.service.Cliente;
 import java.util.List;
 import java.util.Optional;
 
-import com.ejemplo.tiendaalamano.entities.Usuario;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
+import com.ejemplo.tiendaalamano.entities.Cliente;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteCrearDto;
+import com.ejemplo.tiendaalamano.models.Cliente.Dtos.ClienteDto;
 
 public interface IClienteService {
-	public List<Usuario> findAll();
-	public Optional<Usuario> findById(Long id);
-	public List<Usuario> login(String username, String password);
-	public Usuario save(Usuario Usuario);
+	public List<Cliente> findAll();
+	public Optional<Cliente> findById(Long id);
+	public List<Cliente> login(String username, String password);
+	public Cliente save(Cliente Cliente);
 	public void deleteById(Long id);
-	public UsuarioDto crearUsuario(UsuarioCrearDto usuarioCrearDto);
+	public ClienteDto crearCliente(ClienteCrearDto clienteCrearDto);
 	
 	
 }

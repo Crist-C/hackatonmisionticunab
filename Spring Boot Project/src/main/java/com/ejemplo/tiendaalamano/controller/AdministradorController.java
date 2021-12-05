@@ -1,5 +1,22 @@
 package com.ejemplo.tiendaalamano.controller;
 
+import com.ejemplo.tiendaalamano.models.Administrador.Dtos.AdministradorCrearDto;
+import com.ejemplo.tiendaalamano.models.Administrador.Dtos.AdministradorDto;
+import com.ejemplo.tiendaalamano.models.Administrador.Request.AdministradorRegistrarRequest;
+import com.ejemplo.tiendaalamano.models.Administrador.Rest.AdministradorRest;
+import com.ejemplo.tiendaalamano.service.Administrador.IAdministradorService;
+import com.ejemplo.tiendaalamano.service.Carrito.CarritoServiceImpl;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/Administrador")
 public class AdministradorController {
     
     @Autowired

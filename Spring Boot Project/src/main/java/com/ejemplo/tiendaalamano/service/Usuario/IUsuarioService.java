@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import com.ejemplo.tiendaalamano.entities.Usuario;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
-import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioCrearDto;
+import com.ejemplo.tiendaalamano.models.Usuario.Dtos.UsuarioDto;
 
 public interface IUsuarioService {
 	public List<Usuario> findAll();
