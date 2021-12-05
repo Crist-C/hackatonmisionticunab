@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.springframework.web.servlet.FlashMapManager;
+//se Crea la Entity detalle carrito con el fin de crear la relacion entre productos y carritos de muchos a uno
 
 @Entity
 @Table(name = "detallecarrito")
