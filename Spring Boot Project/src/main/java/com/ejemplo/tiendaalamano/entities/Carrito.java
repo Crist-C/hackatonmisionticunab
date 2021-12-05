@@ -15,13 +15,14 @@ import javax.persistence.ManyToOne;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.EntityListeners;  */
 
-
+//Creo la Entity de carrito
 @Entity
 @Table(name="carrito")
 public class Carrito implements Serializable{
 	private static final long serialVersionUID =-5773962493781143007L;
     
     
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long carrito_id;
@@ -60,6 +61,7 @@ public class Carrito implements Serializable{
     private  PuntoDeVenta puntodeVenta;
 
 
+    
     
 
     public Carrito(Long carrito_id, String pesoenkg, String costoTotal, boolean pagoContraEntrega, String calificacion,
