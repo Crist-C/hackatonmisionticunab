@@ -15,7 +15,7 @@ import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
+//se creo la entity punto de venta
 @Entity(name ="puntodeventa")
 @Table(indexes = {
    @Index(columnList = "puntodeventa_id", name = "index_puntodeventa_id", unique = true),
