@@ -2,7 +2,7 @@ package com.ejemplo.tiendaalamano.models.Carrito;
 
 import java.util.Date;
 
-public class CarritoDto {
+public class PuntoDeVentaDto {
     
     private static final long serialVersionUID = 1L;
 

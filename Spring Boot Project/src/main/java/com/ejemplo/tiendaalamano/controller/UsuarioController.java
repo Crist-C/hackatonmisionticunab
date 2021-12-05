@@ -4,6 +4,7 @@ import com.ejemplo.tiendaalamano.models.Usuario.UsuarioCrearDto;
 import com.ejemplo.tiendaalamano.models.Usuario.UsuarioDto;
 import com.ejemplo.tiendaalamano.models.Usuario.UsuarioRegistrarRequest;
 import com.ejemplo.tiendaalamano.models.Usuario.UsuarioRest;
+import com.ejemplo.tiendaalamano.service.Carrito.CarritoServiceImpl;
 import com.ejemplo.tiendaalamano.service.Usuario.IUsuarioService;
 import com.ejemplo.tiendaalamano.service.Usuario.UsuarioServiceImpl;
 
@@ -26,7 +27,7 @@ public class UsuarioController{
     @Autowired
     IUsuarioService iUsuarioService; // Interfaz
     
-    UsuarioServiceImpl usuarioServiceiImpl;
+    CarritoServiceImpl usuarioServiceiImpl;
 
     @GetMapping
     public String obtenerUsuario() {

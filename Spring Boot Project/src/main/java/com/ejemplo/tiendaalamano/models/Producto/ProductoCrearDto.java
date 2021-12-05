@@ -1,9 +1,12 @@
 package com.ejemplo.tiendaalamano.models.Carrito;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CarritoDto {
-    
+
+// Esta es la info que se le muestra al usuario
+public class ProductoCrearDto implements Serializable{
+
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -70,5 +73,9 @@ public class CarritoDto {
     public void setEnviar_domicilio(boolean enviar_domicilio) {
         this.enviar_domicilio = enviar_domicilio;
     }
+
+
     
+    
+
 }

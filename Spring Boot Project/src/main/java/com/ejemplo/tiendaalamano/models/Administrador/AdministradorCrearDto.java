@@ -12,19 +12,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CarritoCrearDto implements Serializable{
+public class AdministradorCrearDto implements Serializable{
 
     private static final long serialVersionUID = 1L;
 
     private Long id;
-    private String pesoenkg;
-    private String costoTotal;
-	private boolean pagoContraEntrega;
-	private String calificacion;
-	private Date horarioEntrega;
-	private int puntosTotales;
-	private boolean estado;
-	private boolean enviarDomicilio;
-    
+    private String nombre;
+    private String password;
+	private boolean correo;
 
 }

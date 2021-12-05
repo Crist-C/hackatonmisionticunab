@@ -1,4 +1,4 @@
-package com.ejemplo.tiendaalamano.service;
+package com.ejemplo.tiendaalamano.service.Model;
 
 import com.ejemplo.tiendaalamano.repository.ModelRepository;
 import com.ejemplo.tiendaalamano.entities.Model;

@@ -1,7 +1,7 @@
 package com.ejemplo.tiendaalamano.controller;
 
 import com.ejemplo.tiendaalamano.entities.Model;
-import com.ejemplo.tiendaalamano.service.ModelService;
+import com.ejemplo.tiendaalamano.service.Model.ModelService;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
