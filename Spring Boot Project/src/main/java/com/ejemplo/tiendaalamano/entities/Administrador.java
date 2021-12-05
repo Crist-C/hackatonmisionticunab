@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+//con esta entidad genero la tabla administrador,
 @Entity
 @Table(name="administrador")
 public class Administrador implements Serializable{
@@ -31,6 +31,7 @@ public class Administrador implements Serializable{
 
     public Administrador() {
     }
+
 
     public Administrador(Long id, String nombre, String password, String correo) {
         this.id = id;
