@@ -1,12 +1,20 @@
 package com.ejemplo.tiendaalamano.entities;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Index;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 @Table(name ="producto")
@@ -145,9 +153,9 @@ public class Producto implements Serializable{
         this.tipo = tipo;
     }
 
-    public Producto(Long producto_id, String nombreProducto, int cantidad, int disponibles, int precio, String marca,
+    public Producto(Long id, String nombreProducto, int cantidad, int disponibles, int precio, String marca,
             int descuento, int impuestos, int peso, int puntos, String tipo) {
-        this.producto_id = producto_id;
+        this.producto_id = id;
         this.nombreProducto = nombreProducto;
         this.cantidad = cantidad;
         this.disponibles = disponibles;

@@ -22,7 +22,7 @@ public class CarritoController {
 
     @GetMapping
     public String obtenerCliente(){
-        return "Cliente obtenido";
+        return "Carrito obtenido";
     }
 
 

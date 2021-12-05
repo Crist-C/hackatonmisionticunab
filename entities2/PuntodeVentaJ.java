@@ -23,7 +23,7 @@ import javax.persistence.ManyToOne;
    @Index(columnList = "telefono", name = "index_telefono", unique = true),
    @Index(columnList = "encargado", name = "index_encargado", unique = true),
 })
-public class PuntoDeVenta implements Serializable{
+public class PuntodeVenta implements Serializable{
 	private static final long serialVersionUID = -5773962493781143007L;
     
     
@@ -47,14 +47,14 @@ public class PuntoDeVenta implements Serializable{
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "puntodeVenta")
     private List<Domiciliario> DomiciliarioList = new ArrayList<>(); 
     
-    public PuntoDeVenta(Long puntodeventa_id, String direccion, String telefono, String encargado) {
+    public PuntodeVenta(Long puntodeventa_id, String direccion, String telefono, String encargado) {
         this.puntodeventa_id = puntodeventa_id;
         this.direccion = direccion;
         this.telefono = telefono;
         this.encargado = encargado;
     }
 
-    public PuntoDeVenta(){
+    public PuntodeVenta(){
 
     }
 

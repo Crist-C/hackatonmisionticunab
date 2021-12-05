@@ -1,28 +1,24 @@
-package com.ejemplo.tiendaalamano.entities;
+package com.ejemplo.tiendaalamano.entities.Corregidos;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="domiciliario")
-public class Domiciliario implements Serializable{
+public class DomiciliarioO implements Serializable{
 	private static final long serialVersionUID = -5773962493781143007L;
+    
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long domiciliario_id; 
+	private Long id;
 
     @Column(length = 25, nullable=false)
 	private String nombre;
@@ -30,26 +26,22 @@ public class Domiciliario implements Serializable{
     @Column(length = 25, nullable=false)
 	private String telefono;
 
-    @ManyToOne
-    @JoinColumn(name ="puntodeventa_id")
-    private PuntoDeVenta puntodeVenta;   
-
-    public Domiciliario(Long id, String nombre, String telefono) {
-        this.domiciliario_id = id;
+    public DomiciliarioO(Long id, String nombre, String telefono) {
+        this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
     }
 
-    public Domiciliario(){
+    public DomiciliarioO(){
 
     }
 
     public Long getId() {
-        return domiciliario_id;
+        return id;
     }
 
     public void setId(Long id) {
-        this.domiciliario_id = id;
+        this.id = id;
     }
 
     public String getNombre() {

@@ -32,7 +32,7 @@ public class Domiciliario implements Serializable{
 
     @ManyToOne
     @JoinColumn(name ="puntodeventa_id")
-    private PuntoDeVenta puntodeVenta;   
+    private PuntodeVenta puntodeVenta;   
 
     public Domiciliario(Long id, String nombre, String telefono) {
         this.domiciliario_id = id;

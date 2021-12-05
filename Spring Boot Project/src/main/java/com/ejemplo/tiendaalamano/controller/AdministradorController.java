@@ -30,7 +30,7 @@ public class AdministradorController {
     @GetMapping
     public String obtenerAdministrador() {
         
-        return "Obtener Administradors";
+        return "Obtener Administradores";
     }
     
     @PostMapping

@@ -1,7 +1,6 @@
 package com.ejemplo.tiendaalamano.entities;
 
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

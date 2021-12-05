@@ -56,15 +56,19 @@ public class Carrito implements Serializable{
     private Cliente cliente;   
 
     @ManyToOne
+    @JoinColumn(name ="producto_id")
+    private Producto producto;
+
+    @ManyToOne
     @JoinColumn(name ="puntodeventa_id")
-    private  PuntoDeVenta puntodeVenta;
+    private  PuntodeVenta puntodeVenta;
 
 
     
 
     public Carrito(Long carrito_id, String pesoenkg, String costoTotal, boolean pagoContraEntrega, String calificacion,
             Date horarioEntrega, int puntosTotales, boolean estado, boolean enviarDomicilio, Cliente cliente,
-            Producto producto, PuntoDeVenta puntodeVenta) {
+            Producto producto, PuntodeVenta puntodeVenta) {
         this.carrito_id = carrito_id;
         this.pesoenkg = pesoenkg;
         this.costoTotal = costoTotal;
@@ -75,6 +79,7 @@ public class Carrito implements Serializable{
         this.estado = estado;
         this.enviarDomicilio = enviarDomicilio;
         this.cliente = cliente;
+        this.producto = producto;
         this.puntodeVenta = puntodeVenta;
     }
 
@@ -220,14 +225,29 @@ public class Carrito implements Serializable{
 
 
 
-    public PuntoDeVenta getPuntodeVenta() {
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+
+
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+
+
+
+    public PuntodeVenta getPuntodeVenta() {
         return puntodeVenta;
     }
 
 
 
 
-    public void setPuntodeVenta(PuntoDeVenta puntodeVenta) {
+    public void setPuntodeVenta(PuntodeVenta puntodeVenta) {
         this.puntodeVenta = puntodeVenta;
     }
 

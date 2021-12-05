@@ -1,63 +1,61 @@
 package com.ejemplo.tiendaalamano.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name="domiciliario")
-public class Domiciliario implements Serializable{
+@Table(name="puntodeventa")
+public class PuntoDeVenta implements Serializable{
 	private static final long serialVersionUID = -5773962493781143007L;
+    
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long domiciliario_id; 
+	private Long id;
 
     @Column(length = 25, nullable=false)
-	private String nombre;
+	private String direccion;
 
     @Column(length = 25, nullable=false)
 	private String telefono;
 
-    @ManyToOne
-    @JoinColumn(name ="puntodeventa_id")
-    private PuntoDeVenta puntodeVenta;   
+    
+    @Column(length = 25, nullable=false)
+	private String encargado;
 
-    public Domiciliario(Long id, String nombre, String telefono) {
-        this.domiciliario_id = id;
-        this.nombre = nombre;
+
+    public PuntoDeVenta(Long id, String direccion, String telefono, String encargado) {
+        this.id = id;
+        this.direccion = direccion;
         this.telefono = telefono;
+        this.encargado = encargado;
     }
-
-    public Domiciliario(){
+    
+    public PuntoDeVenta(){
 
     }
 
     public Long getId() {
-        return domiciliario_id;
+        return id;
     }
 
     public void setId(Long id) {
-        this.domiciliario_id = id;
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTelefono() {
@@ -68,4 +66,13 @@ public class Domiciliario implements Serializable{
         this.telefono = telefono;
     }
 
+    public String getEncargado() {
+        return encargado;
+    }
+
+    public void setEncargado(String encargado) {
+        this.encargado = encargado;
+    }
+
+    
 }
