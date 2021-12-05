@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//se creo la entity prducto
 @Entity
 @Table(name ="producto")
 public class Producto implements Serializable{
